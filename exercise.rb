@@ -30,6 +30,17 @@ end
   # and the sum of its even numbers is (2 + 8) = 10
   def self.even_fibonacci(nth)
     # TODO: Implement this method
+    first = 0
+    second = 1
+    sum = 0
+    step = 0
+    while step < nth # continue until we reach the nth step in the sequence
+     if second % 2 == 0 # check if it's even 
+       sum += second 
+     end 
+     first, second = second, first + second
+     step += 1
+    end
+    p sum
   end
-
 end
